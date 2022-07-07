@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './Containers/ItemListContainer/ItemListContainer';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemListContainer from './Containers/ItemListContainer/ItemListContainer';
+
 
 
 function App() {
