@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import ItemCount from "../../components/ItemCount"
 import ItemList from "../../components/ItemList"
-import elden_ring from "../../components/Images/elden_ring.jpeg" 
-import rimworld from "../../components/Images/rimworld.jpeg" 
-import theOuterWorlds from "../../components/Images/the_outer_worlds.jpeg" 
+import elden_ring from "../../Images/elden_ring.jpeg"
+import rimworld from "../../Images/rimworld.jpeg" 
+import theOuterWorlds from "../../Images/the_outer_worlds.jpeg" 
 
 const ItemListContainer = ({ greeting }) => {
         
