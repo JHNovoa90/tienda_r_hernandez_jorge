@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import ItemCount from "../../components/ItemCount"
+
 import ItemList from "../../components/ItemList"
 import elden_ring from "../../Images/elden_ring.jpeg"
 import rimworld from "../../Images/rimworld.jpeg" 
