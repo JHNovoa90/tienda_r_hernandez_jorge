@@ -1,0 +1,17 @@
+.div-item-detail-container {
+    background: #ffffff;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top:50px ;
+    margin:auto;
+    font-size: 25px;
+    width: 95%;
+}
+
+.div-image-detail img {
+    height: 350px;
+    width: 250px;
+    margin: 35px;
+    
+}
