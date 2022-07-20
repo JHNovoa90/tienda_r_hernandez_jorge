@@ -24,7 +24,7 @@ const Products = (resolution, delay) => {
             if (resolution) {
                 resolve(products)
             } else {
-                reject("Ha habido un error crítico, lo lamentamos")
+                reject("El sistema hizo BUMM, sorry")
             }
         }, delay);
     });
