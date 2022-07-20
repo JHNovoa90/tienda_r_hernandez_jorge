@@ -27,7 +27,6 @@ const ItemDetailContainer = () => {
   }, []) 
   return (
     <div>
-      <p className = 'white-text'> Item Detail Container</p>
       {product === 0 ? 
       <div> 
         <p className = 'white-text'> Loading...</p>
