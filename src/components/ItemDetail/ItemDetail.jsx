@@ -11,7 +11,7 @@ const ItemDetail = ({item}) => {
                 <h6> {item.brand} </h6>
             </div>
             <div className = 'div-image-detail'>
-                <img src = {item.url}  alt = "product-image"/>
+                <img src = {item.url}  alt = "product-image" className = 'image-product'/>
             </div>
             <div className = 'div-product-details'>
                 <p> Descripcion: {item.description} </p>

@@ -6,7 +6,6 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import CartContainer from './containers/CartContainer/CartContainer';
 import ItemListContainer from './containers/ItemListContainer/ItemListContainer.jsx';
 import { Navigate } from 'react-router-dom';
-//import { lazy, Suspense } from 'react';
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
           <Route path = '/' element = {<ItemList />} ></Route>
           <Route path = '/cart' element = {<CartContainer />} ></Route>
           <Route path = '/items' element = {<ItemListContainer />} ></Route>
-          <Route path = '/detalles/:productId' element = {<ItemDetailContainer productId = '1' />}> </Route>
+          <Route path = '/detalles/:productId' element = {<ItemDetailContainer />}> </Route>
           <Route path = '*' element = {<Navigate to = '/' />}></Route>
         </Routes>
         <Footer />

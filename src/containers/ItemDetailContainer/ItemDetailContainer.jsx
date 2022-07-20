@@ -1,31 +1,42 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import Products from '../../helpers/Products';
 import ItemDetail from '../../components/ItemDetail/ItemDetail.jsx';
+import './ItemDetailContainer.css';
 
-const ItemDetailContainer = ({productId}) => {
 
-  const [producto, setProducto] = useState(0);
+const ItemDetailContainer = () => {
+
+  const {productId} = useParams();
+
+  const [product, setProduct] = useState(0);
   
   function getItem() {
-    let promesa = Products(2000, true);
-    console.log(promesa);
-    return promesa
+    return Products(true, 2000);
   } 
 
   useEffect( () => {
+    console.log(new Date());
     getItem().then( (response) => {
-      let producto = response.find((product) => product.id === productId);
-      setProducto(producto);
+      console.log(new Date());
+      let product = response.find((product) => product.id === productId);
+      setProduct(product);
     });
   }, []) 
   return (
     <div>
-      {producto === 0 ? 
-      <p className = 'white-text'> Loading...</p>
+      <p className = 'white-text'> Item Detail Container</p>
+      {product === 0 ? 
+      <div> 
+        <p className = 'white-text'> Loading...</p>
+      </div>
       :
-      <ItemDetail item = {producto} />}
+      <div className = 'div-centered'> 
+        <ItemDetail item = {product} />   
+      </div>
+}
     </div>
   )
 }
