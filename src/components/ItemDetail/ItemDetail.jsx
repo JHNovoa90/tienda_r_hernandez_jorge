@@ -1,5 +1,5 @@
 import React from 'react'
-//import AddToCart from '../AddToCart/AddToCart'
+import AddToCart from '../AddToCart/AddToCart'
 import './ItemDetail.css'
 
 const ItemDetail = ({item}) => {
@@ -19,6 +19,7 @@ const ItemDetail = ({item}) => {
             </div>
 
             <div className = 'div-add-to-cart'>
+                <AddToCart />
             </div>
         </div>
     </div>

@@ -11,6 +11,8 @@ const ItemDetailContainer = () => {
 
   const {productId} = useParams();
 
+  console.log(`La categoría es: ${productId}`);
+
   const [product, setProduct] = useState(0);
   
   function getItem() {
@@ -24,9 +26,10 @@ const ItemDetailContainer = () => {
       let product = response.find((product) => product.id === productId);
       setProduct(product);
     });
-  }, []) 
+  }, ) 
   return (
     <div>
+      <p className = 'white-text'> Item Detail Container</p>
       {product === 0 ? 
       <div> 
         <p className = 'white-text'> Loading...</p>

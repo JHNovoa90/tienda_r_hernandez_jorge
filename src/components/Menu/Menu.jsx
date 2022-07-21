@@ -13,20 +13,9 @@ const Menu = function () {
                     </li>
 
                     <li>
-                         <a href = "/inicio"> PC </a>
+                         <a href = "/topVentas"> TopVentas </a>
                     </li>
 
-                    <li>
-                         <a href = "/inicio"> NINTENDO </a>
-                    </li>
-
-                    <li>
-                         <a href = "/inicio"> XBOX </a>
-                    </li>
-
-                    <li>
-                         <a href = "/inicio"> PLAYSTATION </a>
-                    </li>
                </ul>
           </div>
 
