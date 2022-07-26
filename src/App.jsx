@@ -21,12 +21,6 @@ function App() {
           <Route path = '/items/:productId' element = {<ItemDetailContainer />} > </Route>
           <Route path = '/TopVentas' element = {<ItemListContainer />} />
           <Route path = '*' element = {<Navigate to = '/' />}></Route>
-          {/* Ejemplo lazy loading */}
-          {/* <Route path = '/detalle' element = {
-            <Suspense fallback = {<div> Cargando ...</div>}>
-              <ItemDetailContainer />
-            </ Suspense>
-          }></Route> */}
         </Routes>
         <Footer />
       </div>
