@@ -22,8 +22,7 @@ const AddToCart = () => {
 
     return (
         <div className = 'div-general'>
-            AddToCart Component
-            <p> Select the number of Items you would like to add to your cart</p>
+            <p> Numero de copias</p>
             <div className = 'div-key-components'>
                 <button className = 'btn btn-primary' onClick = {disminuir}> - </button>
                 <div className = 'center'>
@@ -31,8 +30,8 @@ const AddToCart = () => {
                 </div>
                 <button className = 'btn btn-primary' onClick = {aumentar}> + </button>
             </div>
-            <button className = 'btn btn-primary w-75 btn-buy'> Buy Now </button>
-            <button className = 'btn btn-info w-75 btn-buy'> Add to Wishlist </button>
+            <button className = 'btn btn-primary w-75 btn-buy'> Comprar </button>
+            <button className = 'btn btn-info w-75 btn-buy'> Favorito </button>
         </div>
     )
 }

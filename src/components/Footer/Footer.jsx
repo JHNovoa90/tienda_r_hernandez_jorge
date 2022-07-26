@@ -4,7 +4,8 @@ import './Footer.css'
 const Footer = () => {
   return (
     <div className = 'div-footer'>
-        <p className = 'footer-text'>Contactos</p>
+        <p className = 'contact'> Contacto</p>
+        <p className = 'contact'> Redes Sociales</p>
     </div>
   )
 }

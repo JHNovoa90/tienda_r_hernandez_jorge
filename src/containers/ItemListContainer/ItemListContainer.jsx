@@ -17,11 +17,12 @@ const ItemListContainer = () => {
         switch (pathname) {
             case ('/'):
                 return productsArray
-            case('/categories'):
+            case('/categories/' + categoryId):
+            console.log("I am in");
                 productsToShow = productsArray.filter( (item) => item.category === categoryId);
                 return productsToShow
-            case ('/topVentas'):
-                productsToShow = productsArray.filter( (item) => item.topVentas === true);
+            case ('/TopVentas'):
+                productsToShow = productsArray.filter( (item) => item.TopVentas === true);
                 return productsToShow
             default:
                 return productsArray
@@ -37,7 +38,6 @@ const ItemListContainer = () => {
     
     return (
         <div>
-            <p className = 'white-text'> This is an Item List Container </p>
             {productos.length === 0 ? 
             <p> Loading ...</p>    
             :

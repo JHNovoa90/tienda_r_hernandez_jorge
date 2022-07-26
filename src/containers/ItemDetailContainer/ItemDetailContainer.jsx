@@ -22,14 +22,12 @@ const ItemDetailContainer = () => {
   useEffect( () => {
     console.log(new Date());
     getItem().then( (response) => {
-      console.log(new Date());
       let product = response.find((product) => product.id === productId);
       setProduct(product);
     });
   }, ) 
   return (
     <div>
-      <p className = 'white-text'> Item Detail Container</p>
       {product === 0 ? 
       <div> 
         <p className = 'white-text'> Loading...</p>
