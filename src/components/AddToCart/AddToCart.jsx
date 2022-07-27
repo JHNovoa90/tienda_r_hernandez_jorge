@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Intercambiabilidad from '../Intercambiabilidad/Intercambiabilidad';
 import './AddToCart.css'
 
 const AddToCart = () => {
@@ -31,11 +32,8 @@ const AddToCart = () => {
                 </div>
                 <button className = 'btn btn-primary' onClick = {aumentar}> + </button>
             </div>
-            <Link to = {`/cart`} >
-            <button className = 'btn btn-primary w-75 btn-buy'> Comprar </button>
-            </Link>
-            <button className = 'btn btn-info w-75 btn-buy'> Favorito </button>
-        </div>
+                    <Intercambiabilidad/>                            
+            </div>
     )
 }
 
