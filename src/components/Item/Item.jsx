@@ -1,8 +1,17 @@
 import React from 'react';
 import './Item.css';
 import { Link } from 'react-router-dom';
+import AddToCart from '../AddToCart/AddToCart';
 
 const Item = ({item}) => {
+
+  const cartContext = useContext(CartContext);
+  const { addToCart} = cartContext;
+
+  const onAdd = (qty) => {
+    addToCart(item, qty)
+  }
+
   return (
     <div className = 'item-container'>
       <div className = 'image-container'>
@@ -22,7 +31,7 @@ const Item = ({item}) => {
             <button id = 'button-wishlist'> <strong> Detalles </strong> </button>
             </Link>
           </div>
-
+          <AddToCart stock={item.stock} initial={1} onAdd={onAdd}/>
         </div>
     </div>
   )

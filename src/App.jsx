@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import CartContainer from './containers/CartContainer/CartContainer';
 import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
+import CartProvider from './context/CartContext.jsx';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <BrowserRouter> 
       <div className="App">
         <Menu />
+        <CartProvider>
         <Routes>
           <Route path = '/' element = {<ItemListContainer />} > </Route>
           <Route path = '/cart' element = {<CartContainer />} > </Route>
@@ -22,6 +24,7 @@ function App() {
           <Route path = '/TopVentas' element = {<ItemListContainer />} />
           <Route path = '*' element = {<Navigate to = '/' />}></Route>
         </Routes>
+        </CartProvider>
         <Footer />
       </div>
     </BrowserRouter>
