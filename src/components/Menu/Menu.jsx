@@ -55,7 +55,7 @@ const Menu = function () {
           </div>
           }
           <div className = 'right'>
-               <CartWidget items = '0'/>
+               <CartWidget items = {0}/>
           </div> 
         </div>
     );

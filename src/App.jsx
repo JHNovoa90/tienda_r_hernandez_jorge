@@ -1,21 +1,20 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { Navigate } from 'react-router-dom';
-//import { lazy, Suspense } from 'react';
 import Menu from './components/Menu/Menu';
 import Footer from './components/Footer/Footer';
 import CartContainer from './containers/CartContainer/CartContainer';
 import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
-import CartProvider from './context/CartContext.jsx';
+import CartContextProvider from './contexts/CartContext';
 
 function App() {
 
   return (
+    <CartContextProvider> 
     <BrowserRouter> 
       <div className="App">
         <Menu />
-        <CartProvider>
         <Routes>
           <Route path = '/' element = {<ItemListContainer />} > </Route>
           <Route path = '/cart' element = {<CartContainer />} > </Route>
@@ -24,10 +23,10 @@ function App() {
           <Route path = '/TopVentas' element = {<ItemListContainer />} />
           <Route path = '*' element = {<Navigate to = '/' />}></Route>
         </Routes>
-        </CartProvider>
         <Footer />
       </div>
     </BrowserRouter>
+    </CartContextProvider>
   );
 }
 
