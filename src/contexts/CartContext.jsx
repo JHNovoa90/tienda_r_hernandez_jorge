@@ -2,13 +2,9 @@ import { useState } from "react";
 import { createContext } from "react";
 import {flushSync} from "react-dom";
 
-// Notar que el carrito de compras va a ser un array con objetos de tipo producto adentro
-// cada objeto además va a tener una variable que representa la cantidad de items de ese tipo
-// que han sido comprados
 export const CartContext = createContext([]);
 
 const CartContextProvider = ({children}) => {
-    //Definir los estados y las funciones
     const [cartList, setCartList] = useState([]);
     const [itemCount, setItemCount] = useState(0);
     const [firstProduct, setFirstProduct] = useState(true);

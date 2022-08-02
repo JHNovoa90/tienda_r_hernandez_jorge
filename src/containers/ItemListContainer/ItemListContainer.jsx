@@ -31,9 +31,6 @@ const ItemListContainer = () => {
     useEffect(() => {
         let promesa = Products(true, 2000);
         promesa.then( (response) => {
-        // We use a function to decide which products must be shown, taking into account
-        // a - the url
-        // b - the categories, in the case the url is of a category type
         let productsToShow = filterProducts(response);
         setProductos(productsToShow);
         });

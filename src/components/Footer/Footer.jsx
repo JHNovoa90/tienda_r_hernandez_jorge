@@ -1,7 +1,6 @@
 import React from 'react'
 import './Footer.css'
-// This is a comment of an improved footer.
-// Improved footer #2.
+
 const Footer = () => {
   return (
     <div className = 'div-footer'>

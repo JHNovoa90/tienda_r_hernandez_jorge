@@ -11,7 +11,6 @@ const image = require('./cart-image.png');
 const CartWidget = () => {
   const {itemCount} = useContext(CartContext);
 
-  // Vamos a probar resovler el problema con un hook
   useEffect( () => {
     console.log("Sth happened");
     console.log(itemCount);

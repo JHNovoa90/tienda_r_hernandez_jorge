@@ -27,9 +27,6 @@ const Menu = function () {
                               </li>
 
                               <li>
-                                   {/* Notar que en el onClick le estamos cambiando la visibilidad con una */}
-                                   {/* arrow function. Si directamente usara el método de useState */}
-                                   {/* Daría error, pq todo lo que esta entre {} se evalua inmediatamente */}
                                    <a onClick = {cambiarVisibilidad} id = 'link-products' > Plataforma </a>
                               </li>
                          </ul>
