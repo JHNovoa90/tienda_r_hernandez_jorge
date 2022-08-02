@@ -1,29 +1,28 @@
-import React from 'react';
-import { useState } from 'react';
-import Intercambiabilidad from '../Intercambiabilidad/Intercambiabilidad';
+import React from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './AddToCart.css'
 
-const AddToCart = () => {
+const AddToCart = ({onAdd}) => {
 
-    const [itemQuantity, setItemQuantity] = useState(0);
+    const [itemQuantity, setItemQuantity] = useState(1);
 
     function aumentar() {
-        if (itemQuantity <100) {
+        if (itemQuantity < 100) {
             setItemQuantity( itemQuantity + 1);
         }
-        
     }
 
     function disminuir() {
-        if (itemQuantity >0) {
+        if (itemQuantity > 1) {
             setItemQuantity( itemQuantity - 1);
         }
-        
     }
 
     return (
         <div className = 'div-general'>
-            <p> Numero de copias</p>
+            AddToCart Component
+            <p> Select the number of Items you would like to add to your cart</p>
             <div className = 'div-key-components'>
                 <button className = 'btn btn-primary' onClick = {disminuir}> - </button>
                 <div className = 'center'>
@@ -31,8 +30,9 @@ const AddToCart = () => {
                 </div>
                 <button className = 'btn btn-primary' onClick = {aumentar}> + </button>
             </div>
-                    <Intercambiabilidad/>                            
-            </div>
+            <button className = 'btn btn-primary w-75 btn-buy' onClick = {() => onAdd(itemQuantity)} > Añadir al carrito </button>
+            
+        </div>
     )
 }
 

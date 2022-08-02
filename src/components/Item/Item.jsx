@@ -1,4 +1,5 @@
 import React from 'react';
+// Nunca olvidar importar el css
 import './Item.css';
 import { Link } from 'react-router-dom';
 

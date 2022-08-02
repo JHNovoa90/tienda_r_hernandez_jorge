@@ -1,5 +1,4 @@
 /* Classes */
-
 .div-item-detail-container {
     background-color: pink;
     width: 70%;
@@ -27,7 +26,7 @@
     padding: 10px;
 }
 
-.imagen-product {
+.image-product {
     margin: 10%;
     width: 50%;
     height: 80%;

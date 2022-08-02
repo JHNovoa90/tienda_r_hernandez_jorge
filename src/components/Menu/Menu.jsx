@@ -1,7 +1,7 @@
 import './Menu.css';
 import CartWidget from '../CartWidget/CartWidget';
-//import { Link } from 'react-router-dom';
-import { useState} from 'react';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const Menu = function () {
     const [productCategoriesVisible, setProductCategoriesVisible] = useState(false);
@@ -17,47 +17,54 @@ const Menu = function () {
         <div className = "div-menu">          
           <div className = 'superior-menu'>
                <h1> E-GAMEPROJECT </h1>
-               <ul>
-                    <li>
-                         <a href = "/inicio"> Home </a>
-                    </li>
+               <div id = 'div1'>
+                    <div id = 'div2'>
+                         <ul>
+                              <li> <Link to = '7'> Home </Link> </li>
 
-                    <li>
-                         <a href = "/TopVentas"> TopVentas </a>
-                    </li>
+                              <li>
+                                   <a href = "/TopVentas"> TopVentas </a>
+                              </li>
 
-                    <li>
-                         
-                         <a onClick = {cambiarVisibilidad} id = 'link-products' > Plataforma </a>
-                    </li>
-               </ul>
+                              <li>
+                                   {/* Notar que en el onClick le estamos cambiando la visibilidad con una */}
+                                   {/* arrow function. Si directamente usara el método de useState */}
+                                   {/* Daría error, pq todo lo que esta entre {} se evalua inmediatamente */}
+                                   <a onClick = {cambiarVisibilidad} id = 'link-products' > Plataforma </a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
           </div>
-          {productCategoriesVisible === true 
+
+          {productCategoriesVisible == true 
           && 
           <div className = 'categories-menu'> 
-               <ul>
-                    <li>
-                         <a href="/categories/PC"> PC </a>
-                    </li>
+               <div id = 'div3'>
+                    <ul>
+                         <li>
+                              <a href="/categories/PC"> PC </a>
+                         </li>
 
-                    <li>
-                         <a href="/categories/Nintendo"> Nintendo </a>
-                    </li>
+                         <li>
+                              <a href="/categories/Nintendo"> Nintendo </a>
+                         </li>
 
-                    <li>
-                         <a href="/categories/XBOX"> XBOX </a>
-                    </li>
+                         <li>
+                              <a href="/categories/XBOX"> XBOX </a>
+                         </li>
 
-                    <li>
-                         <a href="/categories/Playstation"> Playstation </a>
-                    </li>
-               </ul>
+                         <li>
+                              <a href="/categories/Playstation"> Playstation </a>
+                         </li>
+                    </ul>
+               </div>
           </div>
           }
           <div className = 'right'>
-               <CartWidget items = {0}/>
+               <CartWidget/>
           </div> 
-        </div>
+     </div>
     );
 }
 
