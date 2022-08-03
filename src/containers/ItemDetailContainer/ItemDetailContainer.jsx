@@ -11,8 +11,6 @@ const ItemDetailContainer = () => {
 
   const {productId} = useParams();
 
-  console.log(`La categoría es: ${productId}`);
-
   const [product, setProduct] = useState(0);
   
   function getItem() {
@@ -26,6 +24,7 @@ const ItemDetailContainer = () => {
       setProduct(product);
     });
   }, []) 
+
   return (
     <div>
       <p className = 'white-text'> Item Detail Container</p>

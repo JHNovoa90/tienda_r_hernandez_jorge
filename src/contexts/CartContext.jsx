@@ -2,9 +2,13 @@ import { useState } from "react";
 import { createContext } from "react";
 import {flushSync} from "react-dom";
 
+// Notar que el carrito de compras va a ser un array con objetos de tipo producto adentro
+// cada objeto además va a tener una variable que representa la cantidad de items de ese tipo
+// que han sido comprados
 export const CartContext = createContext([]);
 
 const CartContextProvider = ({children}) => {
+    //Definir los estados y las funciones
     const [cartList, setCartList] = useState([]);
     const [itemCount, setItemCount] = useState(0);
     const [firstProduct, setFirstProduct] = useState(true);
@@ -45,6 +49,7 @@ const CartContextProvider = ({children}) => {
                 setCartList([...cartList, product]);
                 setFirstProduct(false);
                 console.log("New product, empty array");
+                console.log(product);
             } else {
                 setCartList([...cartList, product]);
                 setItemCount(itemCount + product.itemQuantity);
@@ -53,10 +58,31 @@ const CartContextProvider = ({children}) => {
         }
     }
 
-    const totalValue = () => {
+    const emptyCart = () => {
+        console.log("Emptying Cart");
+        setItemCount(0);
+        setCartList([]);
+    }
+
+    const cartIsEmpty = () => {
+        if (itemCount == 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    const removeItem = (item) => {
+        const index = cartList.indexOf(item);
+        console.log(index);
+        cartList.splice(index, 1);
+        calculateTotalItems();
+    }
+
+    const calculateTotalCartValue = () => {
         let total = 0;
         cartList.forEach ((prod) => {
-            total += prod.price;
+            total += prod.price*prod.itemQuantity;
         })
         return total;
     }
@@ -66,7 +92,10 @@ const CartContextProvider = ({children}) => {
             cartList,
             itemCount,
             addToCart,
-            totalValue
+            emptyCart,
+            cartIsEmpty,
+            removeItem,
+            calculateTotalCartValue
         }}>
             {children}
         </CartContext.Provider>
