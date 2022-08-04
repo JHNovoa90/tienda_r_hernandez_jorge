@@ -2,9 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Products from '../../helpers/Products';
 import ItemDetail from '../../components/ItemDetail/ItemDetail.jsx';
 import './ItemDetailContainer.css';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 
 const ItemDetailContainer = () => {
@@ -13,16 +13,12 @@ const ItemDetailContainer = () => {
 
   const [product, setProduct] = useState(0);
   
-  function getItem() {
-    return Products(true, 2000);
-  } 
-
   useEffect( () => {
-    console.log(new Date());
-    getItem().then( (response) => {
-      let product = response.find((product) => product.id === productId);
-      setProduct(product);
-    });
+    const db = getFirestore();
+    const item = doc(db, 'items', productId);
+    getDoc(item).then( (snapshot) => {
+      setProduct({id : snapshot.id, ...snapshot.data()})
+    })
   }, []) 
 
   return (

@@ -23,7 +23,7 @@ const Menu = function () {
                               <li> <Link to = '7'> Home </Link> </li>
 
                               <li>
-                                   <a href = "/TopVentas"> TopVentas </a>
+                              <Link to = "/TopVentas"> TopVentas </Link>
                               </li>
 
                               <li>
