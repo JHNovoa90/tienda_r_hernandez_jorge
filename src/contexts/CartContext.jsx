@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { createContext } from "react";
-import {flushSync} from "react-dom";
 
 // Notar que el carrito de compras va a ser un array con objetos de tipo producto adentro
 // cada objeto además va a tener una variable que representa la cantidad de items de ese tipo
