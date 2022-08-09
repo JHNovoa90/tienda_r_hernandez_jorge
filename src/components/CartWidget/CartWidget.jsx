@@ -9,7 +9,6 @@ const image = require('./cart-image.png');
 const CartWidget = () => {
   const {itemCount} = useContext(CartContext);
 
-
   return (
     <div>
       {console.log("rendering the cart widget",itemCount)}

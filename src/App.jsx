@@ -8,6 +8,7 @@ import ItemListContainer from './containers/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 import CartContextProvider from './contexts/CartContext';
 import { createContext } from 'react';
+import CheckoutContainer from './containers/CheckoutContainer/CheckoutContainer';
 
 const Contexto = createContext([]);
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path = '/' element = {<ItemListContainer />} > </Route>
             <Route path = '/cart' element = {<CartContainer />} > </Route>
+            <Route path = 'checkout' element = {<CheckoutContainer />} > </Route>
             <Route path = '/categories/:categoryId' element = {<ItemListContainer />} > </Route>
             <Route path = '/items/:productId' element = {<ItemDetailContainer />} > </Route>
             <Route path = '/TopVentas' element = {<ItemListContainer />} > </Route>

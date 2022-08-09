@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../contexts/CartContext'
 import CartItem from '../CartItem/CartItem'
+import { Link } from 'react-router-dom'
 import './Cart.css'
 
 const Cart = ({items}) => {
@@ -8,7 +9,7 @@ const Cart = ({items}) => {
   console.log(calculateTotalCartValue);
 
   return (
-    <div className = 'div-main3'>
+    <div className = 'div-main-Cart'>
         <div className = 'div-items'>
             { items.map( (item) => {
                 console.log(item);
@@ -17,7 +18,10 @@ const Cart = ({items}) => {
         </div>
 
         <div className = 'div-total'>
-            <h5> Total : {calculateTotalCartValue()}€</h5>
+            <h4> Total : <strong> {calculateTotalCartValue()} € </strong></h4>
+            <Link to = '/checkout'>
+              <button className = 'btn btn-success'> Proceso de pago </button>
+            </Link>
         </div>
         <div className = 'div-button'>
             <button className = 'btn btn-info' onClick = {() => emptyCart()}> Limpiar carrito </button>

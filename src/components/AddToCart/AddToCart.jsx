@@ -22,14 +22,13 @@ const AddToCart = ({onAdd}) => {
         <div className = 'div-general'>
             <p> Elige la cantidad deseada</p>
             <div className = 'div-key-components'>
-                <button className = 'btn btn-primary' onClick = {disminuir}> - </button>
+                <button className = 'btn btn-info btn-cyan' onClick = {disminuir}> - </button>
                 <div className = 'center'>
                     <p className = 'item-counter-label'> {itemQuantity} </p>
                 </div>
-                <button className = 'btn btn-primary' onClick = {aumentar}> + </button>
+                <button className = 'btn btn-info btn-cyan' onClick = {aumentar}> + </button>
             </div>
-            <button className = 'btn btn-primary w-75 btn-buy' onClick = {() => onAdd(itemQuantity)} > Añadir al carrito </button>
-            
+            <button className = 'btn btn-success w-75 btn-buy' onClick = {() => onAdd(itemQuantity)} > Añadir al carrito </button>
         </div>
     )
 }

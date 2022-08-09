@@ -27,6 +27,7 @@ const ItemDetail = ({item}) => {
                 <p className = 'price-text'> {item.price} € </p>
                 {!purchase ?
                     <div className = 'div-add-to-cart'>
+                        {}
                         <AddToCart onAdd = {userAddToCart}/>
                     </div>
                 :
