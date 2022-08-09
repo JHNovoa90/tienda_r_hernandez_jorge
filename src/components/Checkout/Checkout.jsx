@@ -54,9 +54,9 @@ const Checkout = () => {
 
   const setOrderId = (id) => {
     const successMessage = {
-      title : '¡Success!',
-      text : 'We knew you could do it :) Your order id is: ' + id,
-      imageUrl : 'https://media4.giphy.com/media/RHIYhjyA2R8IibyqPU/giphy.gif?cid=ecf05e47vkq7lb3egy5kuj7pw0n873hujj96ami2o0qvdo0b&rid=giphy.gif&ct=g'
+      title : '¡Su compra se ha realizado con exito!',
+      text : 'Su identificación de pedido es: ' + id,
+      imageUrl : 'https://miro.medium.com/max/500/0*DgONYCgblBRusT4j'
     }
     Swal.fire(successMessage);
   }
@@ -64,7 +64,7 @@ const Checkout = () => {
     <div className = 'div-main-Checkout'> 
       { !cartIsEmpty() ?
         <div>
-        <h4> Total  </h4>
+        <h4> Verificacion </h4>
         <h3> Paso 1: Revisa tus productos</h3>
         <div>
           {cartList.map( element => {
