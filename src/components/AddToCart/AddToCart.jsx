@@ -20,7 +20,6 @@ const AddToCart = ({onAdd}) => {
 
     return (
         <div className = 'div-general'>
-            AddToCart Component
             <p> Elige la cantidad deseada</p>
             <div className = 'div-key-components'>
                 <button className = 'btn btn-primary' onClick = {disminuir}> - </button>
