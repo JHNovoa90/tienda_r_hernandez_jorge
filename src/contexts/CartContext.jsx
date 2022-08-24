@@ -60,7 +60,7 @@ const CartContextProvider = ({children}) => {
     }
 
     const cartIsEmpty = () => {
-        if (itemCount == 0) {
+        if (itemCount === 0) {
             return true
         } else {
             return false
