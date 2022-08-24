@@ -30,6 +30,7 @@ npm start
 Recordar que tiene un backend realizado con Firebase, por si quieren descargar y correr este proyecto, tienen que generar su backend en firebase.
 
 ## Estructura
+![Estructura](https://user-images.githubusercontent.com/101741776/186434065-c1f74936-3112-422c-b379-76a4cd5e85a4.png)
 
 
 ## Gif del proceso de compra
