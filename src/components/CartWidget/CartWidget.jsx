@@ -1,7 +1,7 @@
 import React from 'react'
 import './CartWidget.css';
 import { Link } from 'react-router-dom';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../contexts/CartContext';
 const image = require('./cart-image.png');
 
