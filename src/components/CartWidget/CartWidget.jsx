@@ -11,7 +11,6 @@ const CartWidget = () => {
 
   return (
     <div>
-      {console.log("rendering the cart widget",itemCount)}
       <Link to = '/cart' className = 'no-under-link-black'>
         {itemCount === 0 ?
         <div className = 'cart-div-without-items'> 

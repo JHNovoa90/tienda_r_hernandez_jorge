@@ -30,7 +30,9 @@ const Checkout = () => {
   }
 
   function validEmail(e) {
+    // eslint-disable-next-line 
     var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+    // eslint-disable-next-line 
     return String(e).search (filter) != -1;
   }
 
@@ -71,6 +73,7 @@ const Checkout = () => {
            return (<li key = {element.id}> {element.name} x {element.itemQuantity}</li>)
           })
           }
+          <h5 id = 'purchase-value-checkout'> Total De la Compra : €{calculateTotalCartValue()}</h5>
         </div>
         <br />
         <h3> Paso 2: Rellena tus datos personales</h3>
