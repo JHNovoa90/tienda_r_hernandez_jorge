@@ -16,7 +16,8 @@
     border-color: white;
     border-width: 2px;
     border-radius: 25px;
-    background-color: pink;
+    background-color: black;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -27,14 +28,11 @@
     padding: 0px 15px;
 }
 
-.no-under-link-black {
-    color: black;
-    text-decoration: none;
-}
 
 #label-cart {
     margin: 1px 0px 0px 0px;
 }
+
 
 #small-image {
     width: 25px;
