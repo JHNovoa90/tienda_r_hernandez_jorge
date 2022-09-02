@@ -23,6 +23,11 @@ const Cart = ({items}) => {
               <button className = 'btn btn-success'> Proceso de pago </button>
             </Link>
         </div>
+        <div className = 'div-total'>
+            <Link to = '/'>
+            <button className = 'btn btn-success btn-margin '> Seguir Comprando</button>
+            </Link>
+        </div>
         <div className = 'div-button'>
             <button className = 'btn btn-info' onClick = {() => emptyCart()}> Limpiar carrito </button>
         </div>

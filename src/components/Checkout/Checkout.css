@@ -21,6 +21,10 @@ input::placeholder {
     align-items: center;
 }
 
+.go-home{
+    margin-top: 10px;
+}
+
 .div {
     color: black;
 }

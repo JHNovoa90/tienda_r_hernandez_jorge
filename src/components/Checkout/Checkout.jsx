@@ -92,6 +92,11 @@ const Checkout = () => {
               funcion2();
         }}> Realizar pedido </button>
         </Link>
+        <div className='go-home'>
+        <Link to = '/'>
+        <button className = 'btn btn-success'> Seguir Comprando</button>
+        </Link>
+        </div>
       </div>
         :
         <div>
