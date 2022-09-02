@@ -51,7 +51,7 @@ const CartContainer = () => {
         <div>
           {console.log(loadedCart)}
           {!loadedCart ?
-          <div> Loading the cart items...</div>
+          <div className='loading'> Loading...</div>
           :
           <div>
             <Cart items = {cartList} />
