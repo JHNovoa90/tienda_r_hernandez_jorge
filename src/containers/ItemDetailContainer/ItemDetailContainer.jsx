@@ -19,6 +19,7 @@ const ItemDetailContainer = () => {
     getDoc(item).then( (snapshot) => {
       setProduct({id : snapshot.id, ...snapshot.data()})
     })
+  // eslint-disable-next-line
   }, []) 
 
   return (

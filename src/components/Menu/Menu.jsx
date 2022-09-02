@@ -22,7 +22,7 @@ const Menu = function () {
                          <ul>
                               <li> <Link to = '/'> Home </Link> </li>
                               <li> <Link to = '/TopVentas'> TopVentas </Link> </li> 
-                              <li> <a onClick = {cambiarVisibilidad} id = 'link-products' > Plataforma </a> </li>
+                              <li> <a href="#platform" onClick = {cambiarVisibilidad} id = 'link-products' > Plataforma </a> </li>
                          </ul>
                     </div>
                </div>

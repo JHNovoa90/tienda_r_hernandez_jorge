@@ -51,6 +51,7 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         getProducts();
+    // eslint-disable-next-line
     }, [categoryId, pathname])
     
     return (
