@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 import './Checkout.css'
 
 const Checkout = () => {
-  const { cartList, cartIsEmpty, calculateTotalCartValue} = useContext(CartContext); 
+  const { cartList, cartIsEmpty, calculateTotalCartValue, emptyCart} = useContext(CartContext); 
 
   const verifyFields = () => {
     const emailOne = document.getElementById('emailOne').value;
@@ -84,7 +84,14 @@ const Checkout = () => {
           <input type="tel" placeholder = 'telefono' pattern = '[0-9]{2}-[0-9]{4}-[0-9]{4}' id = 'phone'/>
         </div>
         <br />
-        <button className = 'btn btn-success' onClick={verifyFields}> Realizar pedido </button>
+        <Link to = '/'>
+        <button className = 'btn btn-success'  onClick={() => {
+              const funcion1 = verifyFields;
+              const funcion2 = emptyCart;
+              funcion1();
+              funcion2();
+        }}> Realizar pedido </button>
+        </Link>
       </div>
         :
         <div>
