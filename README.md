@@ -34,4 +34,5 @@ Recordar que tiene un backend realizado con Firebase, por si quieren descargar y
 
 
 ## Gif del proceso de compra
-![Proceso de compra](https://user-images.githubusercontent.com/101741776/186442296-b667eaa4-a28b-4359-aa4f-f6c29a48f994.gif)
+
+![proceso_pago](https://user-images.githubusercontent.com/101741776/188215162-df0d64df-7c2f-41c4-b2e0-f4ceef4d2a10.gif)
